@@ -183,14 +183,23 @@ border: 5px solid #E83E8C;
     box-shadow: 0 8px 20px rgba(75, 29, 107, 0.35);
 }
 .resume-button:hover
-        .contact-button {
+      .contact-button {
     display: inline-block;
     margin: 10px 5px;
-    padding: 10px 20px;
-    background: #1f2937;
+    padding: 12px 22px;
+    background: linear-gradient(90deg, #7B2CBF, #E83E8C);
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(75, 29, 107, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(75, 29, 107, 0.35);
+}
 }
 
 .contact-button:hover {
