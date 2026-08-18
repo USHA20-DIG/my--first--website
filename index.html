@@ -213,6 +213,29 @@ section {
 
 .contact-button:hover {
     opacity: 0.9;
+    .contact a[href^="mailto"] {
+    color: #7B2CBF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact a[href^="mailto"]:hover {
+    color: #E83E8C;
+}
+
+.contact-button[href*="github"] {
+    background: #24292e;
+}
+
+.contact-button[href*="linkedin"] {
+    background: #0077B5;
+}
+
+.contact-button[href*="github"]:hover,
+.contact-button[href*="linkedin"]:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
 }#theme-toggle {
     margin: 10px 5px;
     padding: 10px 16px;
