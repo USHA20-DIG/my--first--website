@@ -1,156 +1,643 @@
-body {
-    background: linear-gradient(135deg, #F5F0FA, #FCEEF6);
-    color: #3F3A45;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-/* Navigation */
-nav {
-    background: linear-gradient(90deg, #5B2A86, #7B3FB5);
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-nav h2,
-nav a {
-    color: #FFFFFF;
-}
+    <title>Ushasree - Personal Website</title>
 
-/* Theme Button */
-#theme-toggle {
-    background: #FFFFFF;
-    color: #5B2A86;
-    border: 2px solid #D65A9F;
-}
+    <style>
 
-#theme-toggle:hover {
-    background: #D65A9F;
-    color: #FFFFFF;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Hero */
-.hero {
-    background: linear-gradient(135deg, #F3E8FA, #FCEAF4);
-}
+        body {
+            background: linear-gradient(135deg, #F5F0FA, #FCEEF6);
+            color: #3F3A45;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-.profile-photo {
-    border: 5px solid #D65A9F;
-}
+        /* Navigation */
+        nav {
+            background: linear-gradient(90deg, #5B2A86, #7B3FB5);
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.hero h1 {
-    color: #5B2A86;
-}
+        nav h2 {
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
 
-.hero p {
-    color: #5A5261;
-}
+        nav a {
+            display: inline-block;
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 5px 10px;
+            font-size: 14px;
+        }
 
-/* Sections */
-section {
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 8px 25px rgba(91, 42, 134, 0.12);
-}
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-section h2 {
-    color: #5B2A86;
-}
+        /* Theme Button */
+        #theme-toggle {
+            margin: 8px 5px;
+            padding: 10px 16px;
+            background: #FFFFFF;
+            color: #5B2A86;
+            border: 2px solid #D65A9F;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-/* Skills */
-.skill {
-    background: #FFFFFF;
-    border: 2px solid #D65A9F;
-    box-shadow: 0 6px 18px rgba(91, 42, 134, 0.15);
-}
+        #theme-toggle:hover {
+            background: #D65A9F;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+        }
 
-.skill h3 {
-    color: #5B2A86;
-}
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #F3E8FA, #FCEAF4);
+        }
 
-/* Education */
-.education-item {
-    background: #FFFFFF;
-}
+        .profile-photo {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #D65A9F;
+        }
 
-.education-item h3 {
-    color: #5B2A86;
-}
+        .hero h1 {
+            font-size: 42px;
+            margin: 10px 0;
+            color: #5B2A86;
+        }
 
-/* Email */
-.contact a[href^="mailto"] {
-    color: #6A35A0;
-}
+        .hero p {
+            font-size: 18px;
+            color: #5A5261;
+        }
 
-.contact a[href^="mailto"]:hover {
-    color: #D65A9F;
-}
+        /* Sections */
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 50px 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(91, 42, 134, 0.12);
+        }
 
-/* Buttons */
-.contact-button,
-.resume-button {
-    background: linear-gradient(90deg, #6A35A0, #D65A9F);
-    color: #FFFFFF !important;
-}
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #5B2A86;
+        }
 
-/* Footer */
-footer {
-    background: #24182D;
-    color: #FFFFFF;
-}
+        section p {
+            margin-bottom: 15px;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 12px;
+            min-width: 200px;
+            flex: 1;
+            border: 2px solid #D65A9F;
+            box-shadow: 0 6px 18px rgba(91, 42, 134, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill h3 {
+            margin-bottom: 10px;
+            color: #5B2A86;
+        }
+
+        /* Education */
+        .education-item {
+            background: #FFFFFF;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .education-item h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #5B2A86;
+        }
+
+        /* Contact */
+        .contact {
+            margin-top: 20px;
+        }
+
+        .contact p {
+            margin: 12px 0;
+        }
+
+        .contact a[href^="mailto"] {
+            color: #6A35A0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact a[href^="mailto"]:hover {
+            color: #D65A9F;
+            text-decoration: underline;
+        }
+
+        /* Contact Buttons */
+        .contact-button {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 12px 22px;
+            background: linear-gradient(90deg, #6A35A0, #D65A9F);
+            color: #FFFFFF !important;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(91, 42, 134, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-button:hover {
+            opacity: 0.9;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(91, 42, 134, 0.35);
+        }
+
+        /* GitHub and LinkedIn buttons */
+        .contact-button[href*="github"] {
+            background: #24292E;
+        }
+
+        .contact-button[href*="linkedin"] {
+            background: #0077B5;
+        }
+
+        /* Resume Button */
+        .resume-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: linear-gradient(90deg, #6A35A0, #D65A9F);
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(91, 42, 134, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resume-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(91, 42, 134, 0.35);
+        }
+
+        /* Footer */
+        footer {
+            background: #24182D;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
 
 
-/* =========================
-   DARK MODE
-========================= */
+        /* =========================
+           DARK MODE
+        ========================= */
 
-body.dark-mode {
-    background: linear-gradient(135deg, #120C1A, #211328);
-    color: #E9DFEE;
-}
+        body.dark-mode {
+            background: linear-gradient(135deg, #120C1A, #211328);
+            color: #E9DFEE;
+        }
 
-body.dark-mode nav {
-    background: linear-gradient(90deg, #180D22, #4A2368);
-}
+        body.dark-mode nav {
+            background: linear-gradient(90deg, #180D22, #4A2368);
+        }
 
-body.dark-mode .hero {
-    background: linear-gradient(135deg, #1C1026, #30183D);
-}
+        body.dark-mode .hero {
+            background: linear-gradient(135deg, #1C1026, #30183D);
+        }
 
-body.dark-mode .hero h1 {
-    color: #E6B3FF;
-}
+        body.dark-mode .hero h1 {
+            color: #E6B3FF;
+        }
 
-body.dark-mode .hero p {
-    color: #E2D4E8;
-}
+        body.dark-mode .hero p {
+            color: #E2D4E8;
+        }
 
-body.dark-mode section {
-    background: #21152B;
-    color: #E9DFEE;
-}
+        body.dark-mode section {
+            background: #21152B;
+            color: #E9DFEE;
+        }
 
-body.dark-mode section h2 {
-    color: #E6B3FF;
-}
+        body.dark-mode section h2 {
+            color: #E6B3FF;
+        }
 
-body.dark-mode .skill,
-body.dark-mode .education-item {
-    background: #2C1C38;
-    color: #E9DFEE;
-    border-color: #D65A9F;
-}
+        body.dark-mode .skill,
+        body.dark-mode .education-item {
+            background: #2C1C38;
+            color: #E9DFEE;
+            border-color: #D65A9F;
+        }
 
-body.dark-mode .skill h3,
-body.dark-mode .education-item h3 {
-    color: #E6B3FF;
-}
+        body.dark-mode .skill h3,
+        body.dark-mode .education-item h3 {
+            color: #E6B3FF;
+        }
 
-body.dark-mode .contact a[href^="mailto"] {
-    color: #E6B3FF;
-}
+        /* Contact links in Dark Mode */
+        body.dark-mode .contact a[href^="mailto"] {
+            color: #E6B3FF;
+        }
 
-body.dark-mode .contact a[href^="mailto"]:hover {
-    color: #E58BC1;
-}
+        body.dark-mode .contact a[href^="mailto"]:hover {
+            color: #E58BC1;
+        }
 
-body.dark-mode #theme-toggle {
-    background: #2C1C38;
-    color: #E6B3FF;
-    border-color: #D65A9F;
-}
+        body.dark-mode .contact-button {
+            color: #FFFFFF !important;
+        }
+
+        body.dark-mode #theme-toggle {
+            background: #2C1C38;
+            color: #E6B3FF;
+            border-color: #D65A9F;
+        }
+
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 10px;
+            }
+
+            nav a {
+                margin: 5px 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 50px 15px;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                margin: 20px 10px;
+                padding: 40px 15px;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+
+            .skills {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .skill {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .education-item {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+
+        <h2>Ushasree</h2>
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+
+        <button id="theme-toggle" onclick="toggleTheme()">
+            🌙 Dark Mode
+        </button>
+
+    </nav>
+
+
+    <!-- Home -->
+    <div class="hero" id="home">
+
+        <img
+            src="IMG_20250720_120634_882 (1).webp"
+            alt="Ushasree"
+            class="profile-photo"
+        >
+
+        <h1>Hello, I'm Ushasree</h1>
+
+        <p>
+            B.Tech Graduate | Digital Marketing Learner |
+            Teaching & Data Entry
+        </p>
+
+    </div>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            Hello! I am Ushasree, a B.Tech graduate in
+            Electronics and Communication Engineering (ECE).
+            I am interested in Digital Marketing, Teaching,
+            Data Entry and Website Creation.
+        </p>
+
+        <p>
+            I am currently developing my digital skills step by step,
+            with a focus on SEO, content marketing, website creation,
+            HTML, CSS, GitHub and Vercel.
+        </p>
+
+        <p>
+            I enjoy learning new technologies and applying my knowledge
+            through practical projects. I am looking forward to
+            opportunities where I can learn, contribute and grow
+            professionally.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+
+                <h3>Digital Marketing</h3>
+
+                <p>
+                    Learning SEO, content marketing and online promotion.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>Data Entry</h3>
+
+                <p>
+                    Accurate data entry and basic computer skills.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>Teaching</h3>
+
+                <p>
+                    Interested in teaching and helping students learn.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>Website Creation</h3>
+
+                <p>
+                    Learning HTML, CSS, GitHub and Vercel.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+
+        <div class="education-item">
+
+            <h3>
+                B.Tech - Electronics & Communication Engineering
+            </h3>
+
+            <p>
+                Gates Institute of Technology, Gooty
+            </p>
+
+            <p>
+                Percentage: 70.6% | Completed: 2016
+            </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>Intermediate</h3>
+
+            <p>
+                NRI SAI JUNIOR COLLEGE, GUNTUR
+            </p>
+
+            <p>
+                Percentage: 87.8%
+            </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>10th Class</h3>
+
+            <p>
+                Captain K.K. Swamy Memorial E.M. School
+            </p>
+
+            <p>
+                Percentage: 86.5%
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="contact">
+
+            <p>
+                I am open to opportunities in Digital Marketing,
+                Teaching and Data Entry.
+            </p>
+
+            <p>
+                Location: Andhra Pradesh, India
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:ushabanala20@gmail.com">
+                    ushabanala20@gmail.com
+                </a>
+            </p>
+
+
+            <p>
+
+                GitHub:
+
+                <a
+                    href="https://github.com/USHA20-DIG"
+                    target="_blank"
+                    class="contact-button"
+                >
+                    Visit My GitHub
+                </a>
+
+            </p>
+
+
+            <p>
+
+                LinkedIn:
+
+                <a
+                    href="https://www.linkedin.com/in/ushasree-banala/"
+                    target="_blank"
+                    class="contact-button"
+                >
+                    Visit My LinkedIn
+                </a>
+
+            </p>
+
+        </div>
+
+
+        <a
+            href="Banala_Ushasree_Resume.pdf"
+            download
+            class="resume-button"
+        >
+            Download My Resume
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Ushasree. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Dark / Light Mode -->
+    <script>
+
+        function toggleTheme() {
+
+            document.body.classList.toggle("dark-mode");
+
+            const button =
+                document.getElementById("theme-toggle");
+
+            if (document.body.classList.contains("dark-mode")) {
+
+                button.innerHTML = "☀️ Light Mode";
+
+            } else {
+
+                button.innerHTML = "🌙 Dark Mode";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
